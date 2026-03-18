@@ -1,0 +1,1 @@
+def extract_image_url(raw: dict[str, object]) - | None:

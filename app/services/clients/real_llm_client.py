@@ -1,10 +1,10 @@
 import json
-from urllib import error, request
 
 from app.config.settings import Settings
 from app.schemas import GeneratedImage, PPEGenerateRequest
 from app.services.clients.base import BaseLLMClient
-from app.services.clients.mock_llm_client import MockLLMClient
+from app.services.clients.mock_llm_client import IMAGE_NAMES, IMAGE_PURPOSES, MockLLMClient
+from app.services.clients.provider_utils import normalize_prompt_items, parse_chat_content, post_json
 
 
 class RealLLMClient(BaseLLMClient):
@@ -27,8 +27,8 @@ class RealLLMClient(BaseLLMClient):
         feature_text = ', '.join(payload.features)
         scenario_text = ', '.join(payload.scenarios)
         user_prompt = (
-            'Generate JSON only with key \"images\" as an array of 7 objects. '
-            'Each object must include: index (int 1-7), name, purpose, positive_prompt, negative_prompt.\\n'
+            'Generate JSON only with key \"images\" as an array of exactly 7 objects. '
+            'Each object must include index, name, purpose, positive_prompt, negative_prompt.\\n'
             f'Product name: {payload.product_name}\\n'
             f'Category: {payload.category.value}\\n'
             f'Colors: {color_text}\\n'
@@ -38,6 +38,7 @@ class RealLLMClient(BaseLLMClient):
             f'Scenarios: {scenario_text}\\n'
             f'Analysis: {json.dumps(analysis)}'
         )
+
         body = {
             'model': self._settings.llm_model,
             'messages': [
@@ -50,38 +51,30 @@ class RealLLMClient(BaseLLMClient):
             'response_format': {'type': 'json_object'},
             'temperature': 0.4,
         }
+        endpoint = f'{self._settings.openai_base_url}/chat/completions'
+        raw = post_json(endpoint, body, self._settings.openai_api_key, timeout=60)
+        if not raw:
+            return self._fallback.generate_image_prompts(payload, analysis)
+
+        content = parse_chat_content(raw)
+        if not content:
+            return self._fallback.generate_image_prompts(payload, analysis)
 
         try:
-            endpoint = f'{self._settings.openai_base_url}/chat/completions'
-            req = request.Request(
-                endpoint,
-                data=json.dumps(body).encode('utf-8'),
-                headers={
-                    'Authorization': f'Bearer {self._settings.openai_api_key}',
-                    'Content-Type': 'application/json',
-                },
-                method='POST',
-            )
-            with request.urlopen(req, timeout=60) as resp:
-                raw = json.loads(resp.read().decode('utf-8'))
-            content = raw['choices'][0]['message']['content']
             parsed = json.loads(content)
-            images = parsed.get('images', [])
-            if isinstance(images, list) and len(images) == 7:
-                normalized: list[dict[str, str]] = []
-                for i, item in enumerate(images, start=1):
-                    normalized.append({
-                        'index': str(item.get('index', i)),
-                        'name': str(item.get('name', f'Image {i}')),
-                        'purpose': str(item.get('purpose', 'PPE product image')),
-                        'positive_prompt': str(item.get('positive_prompt', '')),
-                        'negative_prompt': str(item.get('negative_prompt', 'text, watermark, logo')),
-                    })
-                return normalized
-        except (error.URLError, error.HTTPError, TimeoutError, KeyError, json.JSONDecodeError, ValueError):
-            pass
+        except (json.JSONDecodeError, ValueError):
+            return self._fallback.generate_image_prompts(payload, analysis)
 
-        return self._fallback.generate_image_prompts(payload, analysis)
+        raw_items = parsed.get('images', []) if isinstance(parsed, dict) else []
+        if not isinstance(raw_items, list):
+            raw_items = []
+        normalized = normalize_prompt_items(raw_items, IMAGE_NAMES, IMAGE_PURPOSES)
+
+        has_positive_prompt = any(item.get('positive_prompt') for item in normalized)
+        if not has_positive_prompt:
+            return self._fallback.generate_image_prompts(payload, analysis)
+
+        return normalized
 
     def generate_usage_guide(
         self,
