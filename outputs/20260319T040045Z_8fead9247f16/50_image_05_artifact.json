@@ -1,0 +1,14 @@
+{
+  "index": 5,
+  "name": "Three-Quarter Angle",
+  "output_status": "fallback",
+  "source": "fallback_missing_api_key",
+  "final_url": "https://real-images.example/8fead9247f16/image_5.png",
+  "provider_url": null,
+  "fallback_url": "https://real-images.example/8fead9247f16/image_5.png",
+  "provider_error": "missing_openai_api_key",
+  "artifact_file": "50_image_05_artifact.json",
+  "url_pointer_file": "60_image_05.url",
+  "local_image_file": null,
+  "local_image_status": "not_saved"
+}

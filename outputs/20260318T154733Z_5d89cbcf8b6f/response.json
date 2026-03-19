@@ -1,0 +1,84 @@
+{
+  "status": "success",
+  "product_name": "High Visibility Reflective Safety Vest",
+  "product_category": "vest",
+  "images": [
+    {
+      "index": 1,
+      "name": "Hero Shot - Front View",
+      "purpose": "Primary listing image showing full front appearance.",
+      "image_url": "https://mock-cdn.local/5d89cbcf8b6f/image_1.jpg",
+      "positive_prompt": "Based on the reference product image, Yellow, Silver vest, hero shot - front view, pure white background, product occupies at least 85% of frame, professional studio lighting, reflective type: 2-inch silver reflective strips, certification: ANSI/ISEA 107 Class 2, key features: 6 pockets, zipper front, adjustable waist straps, photorealistic.",
+      "negative_prompt": "text, watermark, logo, human, dark background, blur, low quality"
+    },
+    {
+      "index": 2,
+      "name": "Reflective Strip Detail",
+      "purpose": "Close-up to highlight reflective tape quality.",
+      "image_url": "https://mock-cdn.local/5d89cbcf8b6f/image_2.jpg",
+      "positive_prompt": "Based on the reference product image, Yellow, Silver vest, reflective strip detail, pure white background, product occupies at least 85% of frame, professional studio lighting, reflective type: 2-inch silver reflective strips, certification: ANSI/ISEA 107 Class 2, key features: 6 pockets, zipper front, adjustable waist straps, photorealistic.",
+      "negative_prompt": "text, watermark, logo, human, dark background, blur, low quality"
+    },
+    {
+      "index": 3,
+      "name": "Back View",
+      "purpose": "Back view to show reflective strip layout.",
+      "image_url": "https://mock-cdn.local/5d89cbcf8b6f/image_3.jpg",
+      "positive_prompt": "Based on the reference product image, Yellow, Silver vest, back view, pure white background, product occupies at least 85% of frame, professional studio lighting, reflective type: 2-inch silver reflective strips, certification: ANSI/ISEA 107 Class 2, key features: 6 pockets, zipper front, adjustable waist straps, photorealistic.",
+      "negative_prompt": "text, watermark, logo, human, dark background, blur, low quality"
+    },
+    {
+      "index": 4,
+      "name": "Feature Flat Lay",
+      "purpose": "Flat lay showing functional components.",
+      "image_url": "https://mock-cdn.local/5d89cbcf8b6f/image_4.jpg",
+      "positive_prompt": "Based on the reference product image, Yellow, Silver vest, feature flat lay, pure white background, product occupies at least 85% of frame, professional studio lighting, reflective type: 2-inch silver reflective strips, certification: ANSI/ISEA 107 Class 2, key features: 6 pockets, zipper front, adjustable waist straps, photorealistic.",
+      "negative_prompt": "text, watermark, logo, human, dark background, blur, low quality"
+    },
+    {
+      "index": 5,
+      "name": "Three-Quarter Angle",
+      "purpose": "Three-quarter angle to show volume and shape.",
+      "image_url": "https://mock-cdn.local/5d89cbcf8b6f/image_5.jpg",
+      "positive_prompt": "Based on the reference product image, Yellow, Silver vest, three-quarter angle, pure white background, product occupies at least 85% of frame, professional studio lighting, reflective type: 2-inch silver reflective strips, certification: ANSI/ISEA 107 Class 2, key features: 6 pockets, zipper front, adjustable waist straps, photorealistic.",
+      "negative_prompt": "text, watermark, logo, human, dark background, blur, low quality"
+    },
+    {
+      "index": 6,
+      "name": "Function Close-up Detail",
+      "purpose": "Macro shot of one key feature detail.",
+      "image_url": "https://mock-cdn.local/5d89cbcf8b6f/image_6.jpg",
+      "positive_prompt": "Based on the reference product image, Yellow, Silver vest, function close-up detail, pure white background, product occupies at least 85% of frame, professional studio lighting, reflective type: 2-inch silver reflective strips, certification: ANSI/ISEA 107 Class 2, key features: 6 pockets, zipper front, adjustable waist straps, photorealistic.",
+      "negative_prompt": "text, watermark, logo, human, dark background, blur, low quality"
+    },
+    {
+      "index": 7,
+      "name": "Hanging Display",
+      "purpose": "Hanging view to show overall silhouette.",
+      "image_url": "https://mock-cdn.local/5d89cbcf8b6f/image_7.jpg",
+      "positive_prompt": "Based on the reference product image, Yellow, Silver vest, hanging display, pure white background, product occupies at least 85% of frame, professional studio lighting, reflective type: 2-inch silver reflective strips, certification: ANSI/ISEA 107 Class 2, key features: 6 pockets, zipper front, adjustable waist straps, photorealistic.",
+      "negative_prompt": "text, watermark, logo, human, dark background, blur, low quality"
+    }
+  ],
+  "usage_guide": "Image 1 should be used as the hero image for the listing.\\nImages 2 to 7 should be used as supporting gallery images for feature storytelling.\\nUpload JPG or PNG at 1600px+; keep image 1 as real photo, AI images are better for images 2-7.",
+  "product_analysis": {
+    "product_summary": "High Visibility Reflective Safety Vest for construction, road work, traffic control",
+    "primary_buyer_persona": "Safety-focused industrial buyers and procurement teams.",
+    "key_pain_points": [
+      "Need high daytime visibility",
+      "Need reliable reflective performance at night",
+      "Need comfort for long shifts"
+    ],
+    "must_show_features": [
+      "6 pockets",
+      "zipper front",
+      "adjustable waist straps"
+    ],
+    "background_requirements": "pure white background RGB(255,255,255)"
+  },
+  "meta": {
+    "request_id": "5d89cbcf8b6f",
+    "generated_at": "2026-03-18T15:47:33.589620+00:00",
+    "mode": "mock"
+  }
+}

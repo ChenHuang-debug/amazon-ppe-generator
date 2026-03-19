@@ -34,3 +34,7 @@ class BaseImageClient(ABC):
         payload: PPEGenerateRequest,
     ) -> list[GeneratedImage]:
         raise NotImplementedError
+
+    @abstractmethod
+    def get_last_image_outputs(self) -> list[dict]:
+        raise NotImplementedError

@@ -1,0 +1,76 @@
+{
+  "request_id": "4e0854344a3e",
+  "generated_at": "2026-03-18T16:59:49.410161+00:00",
+  "images": [
+    {
+      "index": 1,
+      "name": "Hero Shot - Front View",
+      "output_status": "fallback",
+      "final_url": "https://real-images.example/4e0854344a3e/image_1.png",
+      "provider_url": null,
+      "fallback_url": "https://real-images.example/4e0854344a3e/image_1.png",
+      "source": "fallback_missing_api_key",
+      "provider_error": "missing_openai_api_key"
+    },
+    {
+      "index": 2,
+      "name": "Reflective Strip Detail",
+      "output_status": "fallback",
+      "final_url": "https://real-images.example/4e0854344a3e/image_2.png",
+      "provider_url": null,
+      "fallback_url": "https://real-images.example/4e0854344a3e/image_2.png",
+      "source": "fallback_missing_api_key",
+      "provider_error": "missing_openai_api_key"
+    },
+    {
+      "index": 3,
+      "name": "Back View",
+      "output_status": "fallback",
+      "final_url": "https://real-images.example/4e0854344a3e/image_3.png",
+      "provider_url": null,
+      "fallback_url": "https://real-images.example/4e0854344a3e/image_3.png",
+      "source": "fallback_missing_api_key",
+      "provider_error": "missing_openai_api_key"
+    },
+    {
+      "index": 4,
+      "name": "Feature Flat Lay",
+      "output_status": "fallback",
+      "final_url": "https://real-images.example/4e0854344a3e/image_4.png",
+      "provider_url": null,
+      "fallback_url": "https://real-images.example/4e0854344a3e/image_4.png",
+      "source": "fallback_missing_api_key",
+      "provider_error": "missing_openai_api_key"
+    },
+    {
+      "index": 5,
+      "name": "Three-Quarter Angle",
+      "output_status": "fallback",
+      "final_url": "https://real-images.example/4e0854344a3e/image_5.png",
+      "provider_url": null,
+      "fallback_url": "https://real-images.example/4e0854344a3e/image_5.png",
+      "source": "fallback_missing_api_key",
+      "provider_error": "missing_openai_api_key"
+    },
+    {
+      "index": 6,
+      "name": "Function Close-up Detail",
+      "output_status": "fallback",
+      "final_url": "https://real-images.example/4e0854344a3e/image_6.png",
+      "provider_url": null,
+      "fallback_url": "https://real-images.example/4e0854344a3e/image_6.png",
+      "source": "fallback_missing_api_key",
+      "provider_error": "missing_openai_api_key"
+    },
+    {
+      "index": 7,
+      "name": "Hanging Display",
+      "output_status": "fallback",
+      "final_url": "https://real-images.example/4e0854344a3e/image_7.png",
+      "provider_url": null,
+      "fallback_url": "https://real-images.example/4e0854344a3e/image_7.png",
+      "source": "fallback_missing_api_key",
+      "provider_error": "missing_openai_api_key"
+    }
+  ]
+}

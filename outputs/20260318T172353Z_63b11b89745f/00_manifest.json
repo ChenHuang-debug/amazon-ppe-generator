@@ -1,0 +1,133 @@
+{
+  "manifest_version": "1.1",
+  "request_id": "63b11b89745f",
+  "generated_at": "2026-03-18T17:23:53.169408+00:00",
+  "mode": "mock",
+  "product_name": "High Visibility Reflective Safety Vest",
+  "product_category": "vest",
+  "output_dir": "20260318T172353Z_63b11b89745f",
+  "files": [
+    {
+      "name": "00_manifest.json",
+      "role": "manifest",
+      "content_type": "application/json",
+      "bytes": 0
+    },
+    {
+      "name": "10_response_payload.json",
+      "role": "response_payload",
+      "content_type": "application/json",
+      "bytes": 5838
+    },
+    {
+      "name": "30_image_prompts.json",
+      "role": "image_prompts",
+      "content_type": "application/json",
+      "bytes": 4778
+    },
+    {
+      "name": "20_usage_guide.md",
+      "role": "usage_guide",
+      "content_type": "text/markdown",
+      "bytes": 337
+    },
+    {
+      "name": "40_image_outputs.json",
+      "role": "image_outputs",
+      "content_type": "application/json",
+      "bytes": 2815
+    },
+    {
+      "name": "response.json",
+      "role": "legacy_response_payload",
+      "content_type": "application/json",
+      "bytes": 5838
+    },
+    {
+      "name": "usage_guide_and_prompts.md",
+      "role": "legacy_usage_guide_and_prompts",
+      "content_type": "text/markdown",
+      "bytes": 4139
+    }
+  ],
+  "image_outputs": {
+    "total_images": 7,
+    "status_counts": {
+      "mock": 0,
+      "fallback": 7,
+      "real": 0
+    },
+    "records": [
+      {
+        "index": 1,
+        "name": "Hero Shot - Front View",
+        "output_status": "fallback",
+        "final_url": "https://real-images.example/63b11b89745f/image_1.png",
+        "provider_url": null,
+        "fallback_url": "https://real-images.example/63b11b89745f/image_1.png",
+        "source": "fallback_missing_api_key",
+        "provider_error": "missing_openai_api_key"
+      },
+      {
+        "index": 2,
+        "name": "Reflective Strip Detail",
+        "output_status": "fallback",
+        "final_url": "https://real-images.example/63b11b89745f/image_2.png",
+        "provider_url": null,
+        "fallback_url": "https://real-images.example/63b11b89745f/image_2.png",
+        "source": "fallback_missing_api_key",
+        "provider_error": "missing_openai_api_key"
+      },
+      {
+        "index": 3,
+        "name": "Back View",
+        "output_status": "fallback",
+        "final_url": "https://real-images.example/63b11b89745f/image_3.png",
+        "provider_url": null,
+        "fallback_url": "https://real-images.example/63b11b89745f/image_3.png",
+        "source": "fallback_missing_api_key",
+        "provider_error": "missing_openai_api_key"
+      },
+      {
+        "index": 4,
+        "name": "Feature Flat Lay",
+        "output_status": "fallback",
+        "final_url": "https://real-images.example/63b11b89745f/image_4.png",
+        "provider_url": null,
+        "fallback_url": "https://real-images.example/63b11b89745f/image_4.png",
+        "source": "fallback_missing_api_key",
+        "provider_error": "missing_openai_api_key"
+      },
+      {
+        "index": 5,
+        "name": "Three-Quarter Angle",
+        "output_status": "fallback",
+        "final_url": "https://real-images.example/63b11b89745f/image_5.png",
+        "provider_url": null,
+        "fallback_url": "https://real-images.example/63b11b89745f/image_5.png",
+        "source": "fallback_missing_api_key",
+        "provider_error": "missing_openai_api_key"
+      },
+      {
+        "index": 6,
+        "name": "Function Close-up Detail",
+        "output_status": "fallback",
+        "final_url": "https://real-images.example/63b11b89745f/image_6.png",
+        "provider_url": null,
+        "fallback_url": "https://real-images.example/63b11b89745f/image_6.png",
+        "source": "fallback_missing_api_key",
+        "provider_error": "missing_openai_api_key"
+      },
+      {
+        "index": 7,
+        "name": "Hanging Display",
+        "output_status": "fallback",
+        "final_url": "https://real-images.example/63b11b89745f/image_7.png",
+        "provider_url": null,
+        "fallback_url": "https://real-images.example/63b11b89745f/image_7.png",
+        "source": "fallback_missing_api_key",
+        "provider_error": "missing_openai_api_key"
+      }
+    ]
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "manifest_version": "1.0",
+  "request_id": "5ba7dfa14091",
+  "generated_at": "2026-03-18T15:55:41.157061+00:00",
+  "mode": "mock",
+  "product_name": "High Visibility Reflective Safety Vest",
+  "product_category": "vest",
+  "output_dir": "%Y%m%dT%H%M%SZ_5ba7dfa14091",
+  "files": [
+    {
+      "name": "00_manifest.json",
+      "role": "manifest",
+      "content_type": "application/json",
+      "bytes": 0
+    },
+    {
+      "name": "10_response_payload.json",
+      "role": "response_payload",
+      "content_type": "application/json",
+      "bytes": 5803
+    },
+    {
+      "name": "30_image_prompts.json",
+      "role": "image_prompts",
+      "content_type": "application/json",
+      "bytes": 4743
+    },
+    {
+      "name": "20_usage_guide.md",
+      "role": "usage_guide",
+      "content_type": "text/markdown",
+      "bytes": 337
+    },
+    {
+      "name": "response.json",
+      "role": "legacy_response_payload",
+      "content_type": "application/json",
+      "bytes": 5803
+    },
+    {
+      "name": "usage_guide_and_prompts.md",
+      "role": "legacy_usage_guide_and_prompts",
+      "content_type": "text/markdown",
+      "bytes": 4139
+    }
+  ]
+}
